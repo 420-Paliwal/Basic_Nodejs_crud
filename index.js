@@ -15,6 +15,13 @@ app.use((req, res,next)=>{
     next()
 })
 
+
+
+app.get('/', (req, res)=>{
+    const html = '<h1> Welcome To The Task Managemet App </h1>';
+    res.send(html)
+}
+
 // Api endpoint to get tasks in HTML format
 app.get("/tasks", (req, res)=>{
     const html = `
